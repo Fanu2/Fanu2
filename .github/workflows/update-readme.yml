@@ -2,8 +2,8 @@ name: Update README with latest repos
 
 on:
   schedule:
-    - cron: "0 */12 * * *" # runs every 12 hours
-  workflow_dispatch: # allows manual run from Actions tab
+    - cron: "0 */12 * * *" # every 12 hours
+  workflow_dispatch:
 
 jobs:
   update-readme:
@@ -18,6 +18,8 @@ jobs:
           node-version: 18
 
       - name: Update README
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           npm install axios
           node .github/scripts/updateReadme.js
