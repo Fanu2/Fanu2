@@ -11,13 +11,14 @@
 ## 🌸 About Me  
 - 💻 Passionate about building elegant solutions  
 - 🌱 Currently learning AI/ML & Cloud Development  
-- ✨ Always experimenting with creative projects  
+- ✨ Experimenting with creative projects  
 
 ---
 
 ## 📂 Latest Projects
 
 <!-- DYNAMIC_REPOS:START -->
+<!-- The GitHub Actions script will insert theme-aware repo cards here -->
 <!-- DYNAMIC_REPOS:END -->
 
 <p align="center">
@@ -31,8 +32,8 @@
 ## 📊 GitHub Stats  
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Fanu2&show_icons=true&theme=tokyonight&hide_border=true&border_radius=20" height="165" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Fanu2&theme=tokyonight&hide_border=true&border_radius=20" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Fanu2&show_icons=true&theme=radical&hide_border=true&border_radius=20" height="165" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Fanu2&theme=radical&hide_border=true&border_radius=20" height="165" />
 </p>
 
 ---
@@ -44,6 +45,16 @@
   <a href="https://twitter.com/Fanu2"><img src="https://img.shields.io/badge/-Twitter-1DA1F2?style=flat&logo=Twitter&logoColor=white" /></a>
   <a href="https://Fanu2.github.io/"><img src="https://img.shields.io/badge/-Portfolio-ff69b4?style=flat&logo=firefox&logoColor=white" /></a>
   <a href="mailto:Fanu2@example.com"><img src="https://img.shields.io/badge/-Email-D14836?style=flat&logo=Gmail&logoColor=white" /></a>
+</p>
+
+---
+
+## 🖼️ Repository Cards (Dark/Light Theme)
+
+<p align="center">
+<!-- DYNAMIC_REPOS:START -->
+<!-- The GitHub Actions script will insert theme-aware repo cards here -->
+<!-- DYNAMIC_REPOS:END -->
 </p>
 
 ---
