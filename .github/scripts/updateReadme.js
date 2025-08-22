@@ -1,21 +1,35 @@
 const fs = require("fs");
 const axios = require("axios");
 
-const username = "Fanu2"; // change this
+const username = "Fanu2"; // your GitHub username
 const readmePath = "README.md";
+const token = process.env.GH_TOKEN; // from GitHub Actions secrets
 
 (async () => {
-  const { data } = await axios.get(`https://api.github.com/users/${Fanu2}/repos?sort=updated&per_page=5`);
-  
-  const repoList = data
-    .map(repo => `- [${repo.name}](${repo.html_url}) ⭐ ${repo.stargazers_count} — ${repo.description || "No description"}`)
-    .join("\n");
+  try {
+    const { data } = await axios.get(
+      `https://api.github.com/user/repos?sort=updated&per_page=5`,
+      {
+        headers: {
+          Authorization: `token ${token}`,
+          Accept: "application/vnd.github.v3+json"
+        }
+      }
+    );
 
-  let readme = fs.readFileSync(readmePath, "utf-8");
-  readme = readme.replace(
-    /<!-- DYNAMIC_REPOS:START -->([\s\S]*?)<!-- DYNAMIC_REPOS:END -->/,
-    `<!-- DYNAMIC_REPOS:START -->\n${repoList}\n<!-- DYNAMIC_REPOS:END -->`
-  );
+    const repoList = data
+      .map(repo => `- [${repo.name}](${repo.html_url}) ⭐ ${repo.stargazers_count} — ${repo.description || "No description"}`)
+      .join("\n");
 
-  fs.writeFileSync(readmePath, readme);
+    let readme = fs.readFileSync(readmePath, "utf-8");
+    readme = readme.replace(
+      /<!-- DYNAMIC_REPOS:START -->([\s\S]*?)<!-- DYNAMIC_REPOS:END -->/,
+      `<!-- DYNAMIC_REPOS:START -->\n${repoList}\n<!-- DYNAMIC_REPOS:END -->`
+    );
+
+    fs.writeFileSync(readmePath, readme);
+    console.log("README updated successfully!");
+  } catch (err) {
+    console.error("Error fetching repos:", err.message);
+  }
 })();
