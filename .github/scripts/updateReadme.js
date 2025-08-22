@@ -1,7 +1,7 @@
 const fs = require("fs");
 const axios = require("axios");
 
-const username = "YOUR_USERNAME"; // change this
+const username = "Fanu2"; // change this
 const readmePath = "README.md";
 
 (async () => {
