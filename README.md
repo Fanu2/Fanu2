@@ -1,4 +1,4 @@
-<h1 align="center">🌸 Hey, I'm YOUR NAME 🌸</h1>
+<h1 align="center">🌸 Hey, I'm Jasvir Singh 🌸</h1>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=9C27B0&center=true&vCenter=true&width=450&lines=Full+Stack+Developer;Open+Source+Enthusiast;Always+Learning+New+Things" alt="Typing Animation" />
