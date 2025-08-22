@@ -2,20 +2,26 @@ name: Update README with latest repos
 
 on:
   schedule:
-    - cron: "0 */12 * * *" # every 12 hours
-  workflow_dispatch:
+    - cron: "0 */12 * * *" # runs every 12 hours
+  workflow_dispatch: # allows manual run from Actions tab
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: |
+
+      - name: Update README
+        run: |
           npm install axios
           node .github/scripts/updateReadme.js
+
       - name: Commit changes
         run: |
           git config --global user.name 'github-actions[bot]'
