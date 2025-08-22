@@ -1,7 +1,7 @@
 const fs = require("fs");
 const axios = require("axios");
 
-const username = "Fanu2";
+const username = "SinghJasvir";
 const readmePath = "README.md";
 const token = process.env.GH_TOKEN;
 
