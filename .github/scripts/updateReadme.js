@@ -5,7 +5,7 @@ const username = "Fanu2"; // change this
 const readmePath = "README.md";
 
 (async () => {
-  const { data } = await axios.get(`https://api.github.com/users/${username}/repos?sort=updated&per_page=5`);
+  const { data } = await axios.get(`https://api.github.com/users/${Fanu2}/repos?sort=updated&per_page=5`);
   
   const repoList = data
     .map(repo => `- [${repo.name}](${repo.html_url}) ⭐ ${repo.stargazers_count} — ${repo.description || "No description"}`)
